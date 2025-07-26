@@ -20,11 +20,11 @@ const Footer = () =>{
           </Col>
 
           <Col md={5}>
-            <h5>Gurukul Institute</h5>
+            <h5>Gurukul Institute </h5>
             <p>
-              Address: 123, Knowledge Avenue, Education City, India<br />
-              Phone: +91-9876543210<br />
-              Email: info@gurukul.edu.in
+              Address: 123, Knowledge Centre, Education City, India<br />
+              Phone: +91-911111111<br />
+              Email: info@gurukul.test
             </p>
           </Col>
 

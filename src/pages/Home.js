@@ -14,6 +14,7 @@ import slider2 from "../assets/Slider2.jpg";
 import slider3 from "../assets/Slider3.jpg";
 import Header from "../component/Header";
 import Footer from "../component/Footer";
+import StudentRegistration from "../component/StudentRegistration";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookOpen, faUserPlus, faSignInAlt, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 
@@ -121,50 +122,7 @@ useEffect(() => {
           <button className="scroll-button right" onClick={() => scrollCourses("right")}>&gt;</button>
         </div>
 
-        {/* 3. Student Registration */}
-        <div className="text-center">
-  <h2 className="section-title"><FontAwesomeIcon icon={faUserPlus} className="me-2" />Student Registration</h2>
-</div>
-        <div className="section-wrapper">
-        <Form className="mb-5 mx-auto" style={{ maxWidth: "800px" }}>
-          <Row>
-            <Col md={6}>
-              <Form.Group className="mb-3">
-                <Form.Label>Full Name</Form.Label>
-                <Form.Control type="text" placeholder="Enter full name" />
-              </Form.Group>
-            </Col>
-            <Col md={6}>
-              <Form.Group className="mb-3">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
-              </Form.Group>
-            </Col>
-          </Row>
-          <Row>
-            <Col md={6}>
-              <Form.Group className="mb-3">
-                <Form.Label>Phone Number</Form.Label>
-                <Form.Control type="text" placeholder="Enter phone number" />
-              </Form.Group>
-            </Col>
-            <Col md={6}>
-              <Form.Group className="mb-3">
-                <Form.Label>Course</Form.Label>
-                <Form.Select>
-                  <option>Select course</option>
-                  <option>Computer Science</option>
-                  <option>Mechanical</option>
-                  <option>Civil</option>
-                </Form.Select>
-              </Form.Group>
-            </Col>
-          </Row>
-          <div className="text-center">
-            <Button variant="success" type="submit">Register</Button>
-          </div>
-        </Form>
-</div>
+        <StudentRegistration/>
         {/* 4. Student Login */}
         <div className="text-center">
   <h2 className="section-title"><FontAwesomeIcon icon={faSignInAlt} className="me-2" />Student Login</h2>

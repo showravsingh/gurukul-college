@@ -8,20 +8,24 @@ import Service from './pages/Service';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-
+import StudentRegister from './pages/StudentRegister';
+import StudentList from './pages/StudentList';
+import EditStudentDetails from './pages/EditStudentDetails.js';
 
 function App() {
-  
   return (
     <React.Fragment>
       <BrowserRouter>
-      <Routes>
-        <Route path='/' Component={Home}/>
-        <Route path='/home' Component={Home}/>
-        <Route path='/about' Component={About}/>
-        <Route path='/service' Component={Service}/>
-        <Route path='/contact' Component={Contact}/>
-      </Routes>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/home' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/service' element={<Service />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/StudentRegister' element={<StudentRegister />} />
+          <Route path='/StudentList' element={<StudentList />} />
+          <Route path='/EditStudentDetails' element={<EditStudentDetails />} />
+        </Routes>
       </BrowserRouter>
     </React.Fragment>
   );
