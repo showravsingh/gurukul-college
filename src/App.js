@@ -11,6 +11,8 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import StudentRegister from './pages/StudentRegister';
 import StudentList from './pages/StudentList';
 import EditStudentDetails from './pages/EditStudentDetails.js';
+import GetStudentByID from './pages/GetStudentByID.js';
+import RemoveStudentDetails from './pages/RemoveStudentDetails.js';
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
           <Route path='/StudentRegister' element={<StudentRegister />} />
           <Route path='/StudentList' element={<StudentList />} />
           <Route path='/EditStudentDetails' element={<EditStudentDetails />} />
+          <Route path='/GetStudentById' element={<GetStudentByID />} />
+          <Route path='/RemoveStudentDetails' element={<RemoveStudentDetails />} />
         </Routes>
       </BrowserRouter>
     </React.Fragment>

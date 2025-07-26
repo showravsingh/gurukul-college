@@ -1,6 +1,6 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from '../assets/logo.png';
+import "../App.css";
 
 const Header = () => {
   return (
@@ -38,54 +38,14 @@ const Header = () => {
               Home
             </NavLink>
           </li>
-
-          <li className="nav-item dropdown">
-            <button
-              className="nav-link dropdown-toggle btn btn-link"
-              id="navbarDropdown"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
+          <li className="nav-item">
+            <NavLink
+              to="/Service"
+              className={({ isActive }) => 'nav-link' + (isActive ? ' active' : '')}
             >
               Services
-            </button>
-            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li>
-                <NavLink
-                  to="/service"
-                  className={({ isActive }) => 'dropdown-item' + (isActive ? ' active' : '')}
-                >
-                  Our Services
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/web-development"
-                  className={({ isActive }) => 'dropdown-item' + (isActive ? ' active' : '')}
-                >
-                  Web Development
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/seo"
-                  className={({ isActive }) => 'dropdown-item' + (isActive ? ' active' : '')}
-                >
-                  SEO
-                </NavLink>
-              </li>
-              <li><hr className="dropdown-divider" /></li>
-              <li>
-                <NavLink
-                  to="/consulting"
-                  className={({ isActive }) => 'dropdown-item' + (isActive ? ' active' : '')}
-                >
-                  Consulting
-                </NavLink>
-              </li>
-            </ul>
+            </NavLink>
           </li>
-
           <li className="nav-item">
             <NavLink
               to="/about"
@@ -94,7 +54,6 @@ const Header = () => {
               About
             </NavLink>
           </li>
-
           <li className="nav-item">
             <NavLink
               to="/contact"
@@ -104,31 +63,59 @@ const Header = () => {
             </NavLink>
           </li>
 
-          <li className="nav-item">
-            <NavLink
-              to="/StudentRegister"
-              className={({ isActive }) => 'nav-link' + (isActive ? ' active' : '')}
+          {/* ✅ Student Area (Hover Dropdown) */}
+          <li className="nav-item dropdown position-relative">
+            <div
+              className="btn btn-warning fw-bold text-dark px-3 rounded shadow-sm blink"
+              id="studentDropdown"
             >
-              Student Registration
-            </NavLink>
-          </li>
-
-          <li className="nav-item">
-            <NavLink
-              to="/StudentList"
-              className={({ isActive }) => 'nav-link' + (isActive ? ' active' : '')}
-            >
-              All Student List
-            </NavLink>
-          </li>
-
-          <li className="nav-item">
-            <NavLink
-              to="/EditStudentDetails"
-              className={({ isActive }) => 'nav-link' + (isActive ? ' active' : '')}
-            >
-              Edit Student Details
-            </NavLink>
+              🎓 Student Area
+            </div>
+            <ul className="dropdown-menu" aria-labelledby="studentDropdown">
+              <li>
+                <NavLink
+                  to="/StudentRegister"
+                  className={({ isActive }) => 'dropdown-item' + (isActive ? ' active' : '')}
+                >
+                  Register New Student
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/GetStudentById"
+                  className={({ isActive }) => 'dropdown-item' + (isActive ? ' active' : '')}
+                >
+                  Student Details with Roll No
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/EditStudentDetails"
+                  className={({ isActive }) => 'dropdown-item' + (isActive ? ' active' : '')}
+                >
+                  Update Student Details
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/StudentList"
+                  className={({ isActive }) => 'dropdown-item' + (isActive ? ' active' : '')}
+                >
+                  All Student List
+                </NavLink>
+              </li>
+              <li><hr className="dropdown-divider" /></li>
+              <li>
+                <NavLink
+                  to="/RemoveStudentDetails"
+                  className={({ isActive }) =>
+                    'dropdown-item text-danger fw-bold' + (isActive ? ' active bg-light' : '')
+                  }
+                >
+                  Remove Student Details
+                </NavLink>
+              </li>
+            </ul>
           </li>
         </ul>
 

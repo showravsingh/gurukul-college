@@ -1,9 +1,7 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import {
   Container,
   Carousel,
-  Row,
-  Col,
   Card,
   Button,
   Form
@@ -16,7 +14,7 @@ import Header from "../component/Header";
 import Footer from "../component/Footer";
 import StudentRegistration from "../component/StudentRegistration";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBookOpen, faUserPlus, faSignInAlt, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import { faBookOpen, faSignInAlt, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 
 
 const Home = () => {

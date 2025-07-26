@@ -133,5 +133,37 @@
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
+/* Custom styling for the Student Area dropdown */
+.student-dropdown-menu {
+  background-color: #f8f9fa;  /* Light background */
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.student-dropdown-menu .dropdown-item {
+  color: #212529;
+  font-weight: 500;
+}
+
+.student-dropdown-menu .dropdown-item:hover {
+  background-color: #e2e6ea;
+  color: #000;
+}
+/* Make dropdown open on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; /* optional: fix slight jump */
+}
+
+/* Blinking effect for Student Area button */
+.blink {
+  animation: blinkEffect 1.4s infinite;
+}
+
+@keyframes blinkEffect {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }  /* was 0.4 before – now more visible */
+}
+
 
 
